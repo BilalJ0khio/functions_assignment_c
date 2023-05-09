@@ -13,6 +13,7 @@ void naturalNumbers(int number);
 void oddNatural(int numbers);
 int checkNum(int number,int digit);
 int fact(int number);
+void primeFactors(int number);
 
 
 
@@ -26,14 +27,60 @@ int main(int argc, const char * argv[]) {
 //    naturalNumbers(5);
 //    oddNatural(10);
 //    cout<<fact(5)<<endl;
-
-    cout<<checkNum(132, 1)<<endl;
+//    cout<<checkNum(132, 1)<<endl;
+    
+//    int number = 36;
+//    int nextNum = number/2;   // denominator i
+//    cout<<nextNum<<endl;
+    
+    
+    primeFactors(18);
+    
+    
+    
+    
+    
     
     return 0;
     
 }
 
 
+
+
+
+
+
+
+void primeFactors(int number){
+    
+//    int nextNumber=0;
+    int i=1;
+    while(i<=number)
+    {
+    
+        for(int i=2;i<=number;i++)
+        {
+            if(number%i == 0)
+            {
+                number= number/i;
+                cout<<i<<" ";
+                break;
+            }
+            
+            
+            
+        }
+        
+        
+        i++;
+        
+        
+    }
+    
+    
+    
+}
 
 
 int checkNum(int number,int digit)
